@@ -1,0 +1,55 @@
+.headerText{
+    font-size: 19px;
+    font-weight: 500;
+    color: #3b4e7a;
+}
+.card{
+    border-radius: 7px !important;
+    border-color: white !important;
+    padding: 10px 5px;
+    height: 100%;
+    .dropdown-menu{
+        box-shadow: 3px 3px 13px 4px rgba(0, 0, 0, 0.1) !important;
+        border: none !important;
+        min-width: 81px !important;
+        padding: 15px 0px !important;
+        left: auto !important;
+        right: 0px;
+        a{
+            color: $mainColor;
+            padding: 0px 15px !important;
+            font-size: 16px;
+            color: #3b4e7a;
+            i{
+                color: #9f9ca5;
+                width: 18px;
+            }
+        }
+        a:active{
+            background-color: #f8f9fa !important;
+        }
+    }
+    .menu{
+        background-color: transparent;
+        border: none;
+        padding: 0px;
+    }
+    .dropdown-toggle::after{
+        display: none !important;
+    }
+    .btn-danger {
+        border:none !important;
+        box-shadow: none !important;
+    }
+}
+.date{
+    font-size: 13px;
+    color: #a4a1a1;
+}
+.total{
+    font-size: 11px;
+    color: #c1c0c0;
+}
+.paddingLeft{
+    padding-left: 43px;
+}

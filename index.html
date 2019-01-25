@@ -1,0 +1,535 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta name="description" content="HTML5 lab1">
+  <meta property="og:url" content="url to this page goes here" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="this website title" />
+  <meta property="og:descrition" content="this website description" />
+  <meta property="og:image" content="pic.jpg" />
+  <link rel="stylesheet" href="dist/css/Base.css">
+  <link href="NodeModules/fontawesome-free-5.6.3-web/css/all.css" rel="stylesheet">  
+  <link href="NodeModules/anyCharts/css/anychart-ui.min.css" rel="stylesheet"> 
+  <link href="NodeModules/anyCharts/fonts/css/anychart-font.min.css" rel="stylesheet"> 
+  <title> SocalHub </title>
+  </head>
+  <body>
+    <header>
+      <!-- firstNav -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light firstNav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo1" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="images/navMenu.png"/>
+        </button>
+        <a class="navbar-brand" href="#"><img src="images/logo.png" class="logoImg"/></a>          
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo1">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Analytics <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Compaigns</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Engagement</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Role & Premissions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Organization</a>
+            </li>
+          </ul>
+          <div class="my-2 my-lg-0">
+            <button type="button" class="btn pr-3">
+              <span class="badge badge-light">1</span><i class="far fa-bell"></i> 
+            </button>
+            <button type="button" class="btn">
+              <span class="badge badge-light">1</span><i class="far fa-envelope"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <!-- secondNav -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light secondNav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo2" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="images/navMenu.png"/>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo2">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Streams</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Comparative</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Influencers</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- thirdNav -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light thirdNav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo3" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="images/menu.png"/>
+        </button>
+        <a class="navbar-brand streamDashboard" href="#"><img src="images/menu.png" class="mb-1"/> Stream Monitoring Dashboard</a>          
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo3">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          </ul>
+          <div class="my-2 my-lg-0">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"><img src="images/add.png"/> Add<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><img src="images/export.png" class="mb-1"/> Export</a>
+              </li>
+              <li class="nav-item dropDown">
+                <a class="nav-link" href="#"><img src="images/date.png"/></a>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Date
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropDown">
+                <a class="nav-link" href="#"><img src="images/filter.png" class="mb-1"/></a>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Filter by platform
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- DataSection -->
+    <section class="pt-3 pb-3 index">
+      <div class="container-fluid">
+        <!-- dropDowns Filter -->
+        <div class="flex">
+          <label class="headerText">Stream</label>
+          <div class="btn-group pl-3">
+            <button type="button" class="btn btn-danger first">Vodafone</button>
+            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </div>
+          <label class="ml-4 headerText filter">Filter</label>
+          <div class="btn-group pl-3">
+            <button type="button" class="btn btn-danger first">None</button>
+            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </div>
+        </div>
+        <!-- section one -->
+        <div class="row mt-3">
+          <div class="col-lg-6">
+            <div class="card">
+              <div>
+                <img src="images/twitter.png" class="mb-1"/>
+                <span class="headerText">Twitter Sentiment</span>
+                <div class="btn-group float-right mr-2">
+                  <button type="button" class="btn btn-danger dropdown-toggle menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="images/menu.png"/>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#"><i class="fas fa-cog mr-1"></i> Settings</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sync-alt mr-1 mt-2"></i> Reload</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt mr-1 mt-2"></i> Delete</a>
+                  </div>
+                </div>
+              </div>
+              <div class="pl-2">
+                <span class="date mr-2">Last month</span>
+                <span class="date">Aggregated by Day</span>
+              </div>
+              <div id="container"></div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row mb-3">
+              <div class="col-lg-6 pr-1 tweetsCount">
+                <div class="card">
+                  <div>
+                    <img src="images/twitter.png" class="mb-1"/>
+                    <span class="headerText">Tweets Count</span>
+                    <div class="btn-group float-right mr-2">
+                      <button type="button" class="btn btn-danger dropdown-toggle menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <img src="images/menu.png"/>
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#"><i class="fas fa-cog mr-1"></i> Settings</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-sync-alt mr-1 mt-2"></i> Reload</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-trash-alt mr-1 mt-2"></i> Delete</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pl-2">
+                    <span class="date mr-2">Last month</span>
+                    <span class="date">Aggregated by Day</span>
+                  </div>
+                  <div class="pl-2 pr-2 mt-2">
+                    <span class="total">Total</span>
+                    <span class="float-right total margin">Change during last week</span>
+                  </div>
+                  <div class="pl-2 pr-2 mt-3">
+                    <span class="headerText">68.934 K</span>
+                    <span class="headerText upNumber"><img src="images/arrow.png"/> 300</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 pl-0 FBCount">
+                <div class="card">
+                  <div>
+                    <img src="images/facebook.png" class="mb-1"/>
+                    <span class="headerText">FB Comments Count</span>
+                    <div class="btn-group float-right mr-2">
+                      <button type="button" class="btn btn-danger dropdown-toggle menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <img src="images/menu.png"/>
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#"><i class="fas fa-cog mr-1"></i> Settings</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-sync-alt mr-1 mt-2"></i> Reload</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-trash-alt mr-1 mt-2"></i> Delete</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pl-2">
+                    <span class="date mr-2">Last month</span>
+                    <span class="date">Aggregated by Day</span>
+                  </div>
+                  <div class="pl-2 pr-2 mt-2">
+                    <span class="total">Total</span>
+                    <span class="float-right total margin">Change during last week</span>
+                  </div>
+                  <div class="pl-2 pr-2 mt-3">
+                    <span class="headerText">61.600 K</span>
+                    <span class="headerText upNumber pl-1"><img src="images/arrow.png"/> 150</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-6 pr-1 tweetsCountCol">
+                <div class="card">
+                  <div>
+                    <img src="images/twitter.png" class="mb-1"/>
+                    <span class="headerText">Tweets Count</span>
+                    <div class="btn-group float-right mr-2">
+                      <button type="button" class="btn btn-danger dropdown-toggle menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <img src="images/menu.png"/>
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#"><i class="fas fa-cog mr-1"></i> Settings</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-sync-alt mr-1 mt-2"></i> Reload</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-trash-alt mr-1 mt-2"></i> Delete</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pl-2">
+                    <span class="date mr-2">Last month</span>
+                    <span class="date">Aggregated by Day</span>
+                  </div>
+                  <div class="pl-2 pr-2 mt-2">
+                    <span class="total">Total</span>
+                    <span class="float-right total margin">Change during last week</span>
+                  </div>
+                  <div class="pl-2 pr-2 mt-3">
+                    <span class="headerText">60.834 K</span>
+                    <span class="headerText upNumber"><img src="images/arrow.png"/> 200</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 pl-0 hiddenCol"></div>
+            </div>
+          </div>
+        </div>
+        <!-- section two -->
+        <div class="row section2">
+          <div class="col-lg-6">
+            <div class="card">
+              <div>
+                <img src="images/twitter.png" class="mb-1"/>
+                <span class="headerText">Map Chart Widget</span>
+                <div class="btn-group float-right mr-2">
+                  <button type="button" class="btn btn-danger dropdown-toggle menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="images/menu.png"/>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#"><i class="fas fa-cog mr-1"></i> Settings</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sync-alt mr-1 mt-2"></i> Reload</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt mr-1 mt-2"></i> Delete</a>
+                  </div>
+                </div>
+              </div>
+              <div class="paddingLeft">
+                <span class="date mr-2">Last month</span>
+                <span class="date">Aggregated by Day</span>
+              </div>
+              <div id="map"></div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card">
+              <div>
+                <img src="images/facebook.png" class="mb-1"/>
+                <span class="headerText">FB Sentiment of comments</span>
+                <div class="btn-group float-right mr-2">
+                  <button type="button" class="btn btn-danger dropdown-toggle menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="images/menu.png"/>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#"><i class="fas fa-cog mr-1"></i> Settings</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sync-alt mr-1 mt-2"></i> Reload</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt mr-1 mt-2"></i> Delete</a>
+                  </div>
+                </div>
+              </div>
+              <div class="paddingLeft">
+                <span class="date mr-2">Last month</span>
+                <span class="date">Aggregated by Day</span>
+              </div>
+              <div id="pieChart"></div>
+            </div>
+          </div>
+        </div>
+        <!-- section three -->
+        <div class="row section2">
+          <div class="col-lg-6">
+            <div class="card">
+              <div>
+                <img src="images/facebook.png" class="mb-1"/>
+                <span class="headerText">Posts With Comments Count over time</span>
+                <div class="btn-group float-right mr-2">
+                  <button type="button" class="btn btn-danger dropdown-toggle menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="images/menu.png"/>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#"><i class="fas fa-cog mr-1"></i> Settings</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sync-alt mr-1 mt-2"></i> Reload</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt mr-1 mt-2"></i> Delete</a>
+                  </div>
+                </div>
+              </div>
+              <div class="paddingLeft">
+                <span class="date mr-2">Last month</span>
+                <span class="date">Aggregated by Day</span>
+              </div>
+              <div id="posts"></div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card">
+              <div>
+                <img src="images/twitter.png" class="mb-1"/>
+                <span class="headerText">Posts & Negative Tweets over time</span>
+                <div class="btn-group float-right mr-2">
+                  <button type="button" class="btn btn-danger dropdown-toggle menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="images/menu.png"/>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#"><i class="fas fa-cog mr-1"></i> Settings</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sync-alt mr-1 mt-2"></i> Reload</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt mr-1 mt-2"></i> Delete</a>
+                  </div>
+                </div>
+              </div>
+              <div class="paddingLeft">
+                <span class="date mr-2">Last month</span>
+                <span class="date">Aggregated by Day</span>
+              </div>
+              <div id="chartContainer"></div>
+            </div>
+          </div>
+        </div>
+        <!-- section four -->
+        <div class="row section2">
+            <div class="col-lg-6">
+              <div class="card">
+                <div>
+                  <img src="images/twitter.png" class="mb-1"/>
+                  <span class="headerText">Top Fans Widget</span>
+                  <div class="btn-group float-right mr-2">
+                    <button type="button" class="btn btn-danger dropdown-toggle menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="images/menu.png"/>
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fas fa-cog mr-1"></i> Settings</a>
+                      <a class="dropdown-item" href="#"><i class="fas fa-sync-alt mr-1 mt-2"></i> Reload</a>
+                      <a class="dropdown-item" href="#"><i class="fas fa-trash-alt mr-1 mt-2"></i> Delete</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="paddingLeft">
+                  <span class="date mr-2">Last month</span>
+                  <span class="date">Aggregated by Day</span>
+                </div>
+                <div class="topFans pl-4 pt-3">
+                  <div class="row mr-0">
+                    <div class="col-12 col-sm-6">
+                      <img src="images/img.png"/>
+                      <span>Ahmed Ali</span>
+                    </div>
+                    <div class="col-12 col-sm-6 text-right fans pr-3">
+                      <span class="pr-2">38</span>
+                      <img class="pr-2" src="images/netural.png"/>
+                      <span class="pr-2 positive">8</span>
+                      <img class="pr-2" src="images/positive.png"/>
+                      <span class="pr-2 negative">61</span>
+                      <img src="images/negative.png"/>
+                    </div>     
+                  </div>
+                  <div class="row pt-2 mr-0">
+                    <div class="col-12 col-sm-6">
+                      <img src="images/img.png"/>
+                      <span>Ahmed Ali</span>
+                    </div>
+                    <div class="col-12 col-sm-6 text-right fans pr-3">
+                      <span class="pr-2">38</span>
+                      <img class="pr-2" src="images/netural.png"/>
+                      <span class="pr-2 positive">8</span>
+                      <img class="pr-2" src="images/positive.png"/>
+                      <span class="pr-2 negative">61</span>
+                      <img src="images/negative.png"/>
+                    </div>
+                  </div>
+                  <div class="row pt-2 mr-0">
+                    <div class="col-12 col-sm-6">
+                      <img src="images/img.png"/>
+                      <span>Ahmed Ali</span>
+                    </div>
+                    <div class="col-12 col-sm-6 text-right fans pr-3">
+                      <span class="pr-2">38</span>
+                      <img class="pr-2" src="images/netural.png"/>
+                      <span class="pr-2 positive">8</span>
+                      <img class="pr-2" src="images/positive.png"/>
+                      <span class="pr-2 negative">61</span>
+                      <img src="images/negative.png"/>
+                    </div>
+                  </div> 
+                  <div class="row pt-2 mr-0">
+                    <div class="col-12 col-sm-6">
+                      <img src="images/img.png"/>
+                      <span>Ahmed Ali</span>
+                    </div>
+                    <div class="col-12  col-sm-6 text-right fans pr-3">
+                      <span class="pr-2">38</span>
+                      <img class="pr-2" src="images/netural.png"/>
+                      <span class="pr-2 positive">8</span>
+                      <img class="pr-2" src="images/positive.png"/>
+                      <span class="pr-2 negative">61</span>
+                      <img src="images/negative.png"/>
+                    </div>
+                  </div>
+                  <div class="row pt-2 mr-0">
+                    <div class="col-12 col-sm-6">
+                      <img src="images/img.png"/>
+                      <span>Ahmed Ali</span>
+                    </div>
+                    <div class="col-12 col-sm-6 fans text-right pr-3">
+                      <span class="pr-2">38</span>
+                      <img class="pr-2" src="images/netural.png"/>
+                      <span class="pr-2 positive">8</span>
+                      <img class="pr-2" src="images/positive.png"/>
+                      <span class="pr-2 negative">61</span>
+                      <img src="images/negative.png"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card">
+                <div>
+                  <img src="images/twitter.png" class="mb-1"/>
+                  <span class="headerText">Most frequent words</span>
+                  <div class="btn-group float-right mr-2">
+                    <button type="button" class="btn btn-danger dropdown-toggle menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="images/menu.png"/>
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fas fa-cog mr-1"></i> Settings</a>
+                      <a class="dropdown-item" href="#"><i class="fas fa-sync-alt mr-1 mt-2"></i> Reload</a>
+                      <a class="dropdown-item" href="#"><i class="fas fa-trash-alt mr-1 mt-2"></i> Delete</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="paddingLeft">
+                  <span class="date mr-2">Last month</span>
+                  <span class="date">Aggregated by Day</span>
+                </div>
+                <div class="mostWords pt-3">
+                  <div>
+                    <span class="important ahmedZaki">#AHMED_ZAKY</span>
+                  </div>
+                  <div class="egypt">
+                    <span>#EGYPT</span>
+                  </div>
+                  <div>
+                    <span>#MONA_ZAKY</span>
+                    <span class="adelEmam">#ADEL_Emam</span>
+                  </div>
+                  <div>
+                    <span class="pr-4">#CINEMA</span>
+                    <span class="important">#Cairo_Festival</span>
+                  </div>
+                  <div>
+                    <span class="mahmoud">#Mahmoud_Abd Aziz</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <script src="NodeModules/jQuery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="NodeModules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="NodeModules/anyCharts/js/anychart-base.min.js"></script>
+    <script src="NodeModules/anyCharts/js/anychart-ui.min.js"></script>
+    <script src="NodeModules/anyCharts/js/anychart-pie.min.js"></script>
+    <script src="NodeModules/anyCharts/js/anychart-core.min.js"></script>
+    <script src="NodeModules/anyCharts/js/anychart-map.min.js"></script>
+    <script src="NodeModules/anyCharts/geodata/custom/world_source//world_source.js"></script>
+    <script src="NodeModules/anyCharts/js/anychart-exports.min.js"></script>
+    <script type="text/javascript" src="Scripts/script.js"></script>
+  </body>
+</html>

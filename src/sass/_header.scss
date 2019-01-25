@@ -1,0 +1,170 @@
+.firstNav{
+    background-color: $mainColor !important;
+    .nav-item.active{
+        a{
+            color: white !important;
+        }
+    }
+    .nav-item:hover{
+        a{
+            color: white !important;
+        }
+    }
+    .nav-item{
+        a{
+            color: rgba(225,225,225,0.6) !important;
+            font-size: 17px;
+            padding-right: 19px !important;
+        }
+    }
+    .badge{
+        border-radius: 50%;
+        background-color: #7ed0e6;
+        color: white;
+        margin-right: 13px;
+        width: 16px;
+        height: 16px;
+        vertical-align: super !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: -7px;
+        vertical-align: super;
+    }
+    .btn {
+        background-color: transparent;
+        padding: 0px;
+        i{
+            color: white;
+            font-size: 19px;
+        }
+    }
+    .btn:focus{
+        box-shadow: none;
+    }
+}
+
+.secondNav{
+    background-color: $secondColor !important;
+    .nav-item{
+        a{
+            color: rgba(225,225,225,0.6) !important;
+            font-size: 15px;
+            padding: 3px 17px !important;
+        }
+    }
+    .nav-item.active{
+        a{
+            background-color: #5465ac;
+            border-radius: 15px;
+            color: white !important;
+        }
+    }
+    .nav-item:hover{
+        a{
+            background-color: #5465ac;
+            border-radius: 15px;
+            color: white !important;
+        }
+    }
+}
+
+.thirdNav{
+    background-color: white !important;
+    .streamDashboard{
+        font-size: 22px;
+        color: $mainColor;
+    }
+    .nav-item{
+        a{
+            color: #0c2460 !important;
+            font-size: 14px;
+            font-weight: 500;
+            img{
+                padding-right: 3px;
+            }
+        }
+    }
+    li{
+        display: flex;
+        align-items: center;
+    }
+    .dropDown{
+        .nav-link{
+            padding-right: 0px;
+            margin-right: -5px;
+        }
+        button{
+            padding-left: 7px;
+            padding-right: 0px;
+            font-size: 14px;
+            font-weight: 500;
+            color: $mainColor;
+            border: none;
+            background-color: transparent;
+        }
+        button:active{
+            color: $mainColor !important;
+            border: none !important;
+            background-color: transparent !important;
+        }
+        .show > .btn-secondary.dropdown-toggle{
+            color: $mainColor !important;
+            border: none !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+        button:focus{
+            box-shadow: none !important;
+        }
+        .dropdown-toggle::after{
+            vertical-align: bottom !important;
+        }
+        .dropdown-menu{
+            left: auto !important;
+            right: 0px !important;
+        }
+    }
+    .dropDown::focus{
+        outline: none;
+    }
+}
+
+@media only screen and (max-width: 992px){
+
+    header { 
+        .navbar{
+            .navbar-toggler{
+                border: none;
+            }
+            .navbar-toggler:focus{
+                outline: none;
+            }
+            .streamDashboard{
+                img{
+                    display: none;
+                }
+            }
+        }
+        .thirdNav{
+            li{
+                align-items: baseline;
+            }
+            img{
+                margin-left: -7px;
+                width: 37px;
+            }
+            ul{
+                margin-left: 17px;
+            }
+            .nav-item{
+                a{
+                    img{
+                        width: 24px;
+                    }
+                }
+            }
+        }
+     }
+
+}

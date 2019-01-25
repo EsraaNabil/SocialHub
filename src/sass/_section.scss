@@ -1,0 +1,218 @@
+section{
+    background-color: #f7f7f7;
+    svg{
+        height: 258px;
+    }
+    .margin{
+        margin-top: 6px;
+    }
+    .flex{
+        display: flex;
+        align-items: center;
+        label{
+            margin-bottom: 0px;
+        }
+        button{
+            background-color: transparent;
+            border-color: #b9b5b5;
+            color: #b9b5b5;
+            border-radius: 7px;
+            margin-left: 10px;
+            padding: 3px 10px;
+            i{
+                font-size: 13px;
+            }
+        }
+        button:hover{
+            background-color: transparent;
+            border-color: #b9b5b5;
+            color: #b9b5b5;
+        }
+        button:active{
+            background-color: transparent !important;
+            border-color: #b9b5b5 !important;
+            color: #b9b5b5 !important;
+        }
+        button:focus{
+            box-shadow: none !important;
+        }
+        .show > .btn-secondary.dropdown-toggle{
+            background-color: transparent !important;
+            border-color: #b9b5b5 !important;
+            color: #b9b5b5 !important;
+            box-shadow: none !important;
+        }
+        .show > .btn-danger.dropdown-toggle{
+            background-color: transparent !important;
+            border-color: #b9b5b5 !important;
+            color: #b9b5b5 !important;
+            box-shadow: none !important;
+        }
+        .dropdown-toggle{
+            border-left: none;
+        }
+        .first{
+            border-right: none;
+            width: 130px;
+            text-align: left;
+        }
+        .dropdown-toggle::after{
+            display: none !important;
+        }
+    }
+    .upNumber{
+        margin-left: 80px;
+        color: #77b35e;
+    }
+    .section2{
+        margin-top: 30px;
+    }
+    .topFans{
+        span{
+            color: #374a7c;
+            font-weight: 500;
+        }
+        .positive{
+            color: #6f7fbd
+        }
+        .negative{
+            color: #bd2d52;
+        }
+    }
+    .mostWords{
+        div{
+            text-align: center;
+            span{
+                color: #374a7c;
+                font-size: 16px;
+                font-weight: 500;
+            }
+            .important{
+                font-weight: 600;
+                font-size: 26px;
+            }
+            .ahmedZaki{
+                margin-left: -180px;
+            }
+            .adelEmam{
+                margin-left: 22px;
+                font-size: 19px;
+            }
+            .mahmoud{
+                font-size: 13px;
+                margin-left: 24px;
+            }
+        }
+        .egypt{
+            margin-top: -16px;
+            span{
+                margin-left: 75px;
+            }
+        }
+    }
+    ///////////////// chart logo /////////////
+    .anychart-credits-text{
+        display: none;
+    }
+    .anychart-credits-logo{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    nav{
+        padding-left: 5px !important;
+    }
+    .logoImg{
+        position: absolute;
+        left: 40px;
+        top: 2px;
+    }
+    .streamDashboard{
+        position: absolute;
+        font-size: 15px !important;
+        left: 52px;
+        top: 10px;
+    }
+    .firstNav{
+        ul,div{
+            padding-left: 7px !important;
+        }
+    }
+    .col-lg-6{
+        margin-bottom: 20px !important;
+    }
+    .row{
+        margin-bottom: 0px !important;
+    }
+    .hiddenCol{
+        display: none;
+    }
+    .tweetsCount{
+        padding-right: 15px !important;
+    }
+    .tweetsCountCol{
+        margin-bottom: 0px !important;
+        padding-right: 15px !important;
+    }
+    .section2{
+        margin-top: 0px !important;
+    }
+    .FBCount{
+        padding-left: 15px !important;
+    }
+}
+@media only screen and (max-width: 520px){
+    .flex{
+        display: block !important;
+        label{
+            display: block;
+            margin-left: 0px !important;
+        }
+        div.btn-group{
+            padding-left: 0px !important;
+        }
+        .filter{
+            margin-top: 7px;
+        }
+    }
+}
+
+@media only screen and (max-width:400px){
+    g[data-ac-wrapper-id='8'],g[data-ac-wrapper-id='59']{
+        transform: matrix(1,0,0,1,180.03125,158) !important;
+    }
+    g[data-ac-wrapper-id='117'],g[data-ac-wrapper-id='208']{
+        transform: matrix(1,0,0,1,120.03125,158) !important;
+    }
+    .headerText{
+        font-size: 15px !important;
+    }
+    section{
+        .mostWords{
+            div{
+                span{
+                    font-size: 11px;
+
+                }
+            }
+        }
+    }
+    .adelEmam{
+        font-size: 12px !important;
+    }
+    .important{
+        font-size: 15px !important;
+    }
+    .ahmedZaki{
+        margin-left: -120px !important;
+    }
+    .mahmoud{
+        font-size: 10px !important;
+    }
+    .fans{
+        text-align: left !important;
+        padding-left: 24px;
+        padding-bottom: 5px;
+    }
+}
